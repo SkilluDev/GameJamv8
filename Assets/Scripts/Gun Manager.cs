@@ -16,6 +16,8 @@ public class GunManager : MonoBehaviour
     [SerializeField] private Transform cameraPosition;
 
     [SerializeField] private float gunDamage;
+    [SerializeField] private RandomSound gunShotSound;
+    [SerializeField] private AudioSource audioSource;
 
     private Coroutine currentShoot;
 
@@ -34,6 +36,7 @@ public class GunManager : MonoBehaviour
         shooting = true;
         gunSprite.sprite = gunShoot;
         ShootGun();
+        gunShotSound.Play(audioSource);
         yield return new WaitForSeconds(shootTime);
         gunSprite.sprite = gunNormal;
         shooting = false;

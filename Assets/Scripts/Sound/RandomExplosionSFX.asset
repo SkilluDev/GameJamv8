@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 485830d6a74d5fc4fa4469cce119bd9d, type: 3}
+  m_Name: RandomExplosionSFX
+  m_EditorClassIdentifier: Assembly-CSharp::RandomSound
+  soundList:
+  - {fileID: 8300000, guid: f400f331352a408408e88ea49ed4beb0, type: 3}
+  - {fileID: 8300000, guid: e4e565d47faa5984fae47a0072506c81, type: 3}
+  volume: 1

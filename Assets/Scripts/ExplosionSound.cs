@@ -1,13 +1,13 @@
 using UnityEngine;
 using System.Collections;
 
-public class PlayAndDie : MonoBehaviour
+public class ExplosionSound : MonoBehaviour
 {
-    [SerializeField] private RandomSound deathSound;
+    [SerializeField] private RandomSound explosionSound;
     [SerializeField] private AudioSource audioSource;
     private void Awake()
     {
-        deathSound.Play(audioSource);
+        explosionSound.Play(audioSource);
         StartCoroutine(WaitToDie(2f));
     }
 
