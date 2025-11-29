@@ -3,8 +3,7 @@ using UnityEngine;
 public class EnemyVision : MonoBehaviour
 {
     LayerMask _playerLayer;
-    [SerializeField] GameObject playerTransform;
-
+    [SerializeField] private float speed;
     void Awake()
     {
         _playerLayer = LayerMask.GetMask("Player");
@@ -14,18 +13,16 @@ public class EnemyVision : MonoBehaviour
     void FixedUpdate()
     {
         RaycastHit hit;
-        Vector3 position = playerTransform.transform.position;
-        Vector3 direction = (position - transform.position).normalized;
-        
-        if(Physics.Raycast(transform.position, direction, out hit, Mathf.Infinity))
+        if(Physics.Raycast(transform.position, transform.forward, out hit, Mathf.Infinity))
         {
             if ((_playerLayer & (1 << hit.transform.gameObject.layer)) != 0)
             {
-                Debug.DrawRay(transform.position, direction * hit.distance, Color.yellow); 
+                Debug.DrawRay(transform.position, transform.forward * hit.distance, Color.yellow);
+                transform.position += transform.forward * (speed * Time.fixedDeltaTime);
             }
             else
             {
-                Debug.DrawRay(transform.position, direction * 1000, Color.white);
+                Debug.DrawRay(transform.position, transform.forward * 1000, Color.white);
             }
 
         }
