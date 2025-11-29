@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6419633207969852648}
   - component: {fileID: 1572784806506914300}
   - component: {fileID: 1710306184760596751}
-  - component: {fileID: 887253760139298095}
+  - component: {fileID: 8760059986234197427}
   m_Layer: 3
   m_Name: Enemy
   m_TagString: Untagged
@@ -182,7 +182,7 @@ MonoBehaviour:
   explosionPrefab: {fileID: 7429760702665913273, guid: bb96a59eb77685644b9c6f540bac9952, type: 3}
   health: {fileID: 1710306184760596751}
   hitSound: {fileID: 11400000, guid: 9cc3bcc510d1a7b4b8acf7a0a39c19de, type: 2}
-  audioSource: {fileID: 887253760139298095}
+  audioSource: {fileID: 8760059986234197427}
 --- !u!114 &1710306184760596751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,7 +196,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   maxHealth: 10
---- !u!82 &887253760139298095
+  deathSound: {fileID: 11400000, guid: 3364cf899e8c3c54d87b92f612d81d5e, type: 2}
+  audioSource: {fileID: 8760059986234197427}
+--- !u!82 &8760059986234197427
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
