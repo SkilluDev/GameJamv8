@@ -518,6 +518,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5998895568761857544, guid: f9d87578d14168f4b921a564a032f7da, type: 3}
   m_PrefabInstance: {fileID: 1049172880}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1091128617 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3091872146315943742, guid: e7f21f34d50e38947a97a8c924b31239, type: 3}
+  m_PrefabInstance: {fileID: 7894589292992083625}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1091486295
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1544,6 +1549,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 1714523022445859808, guid: ac06733c47d5d004c8f206d8944d25d7, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 1091128617}
     - target: {fileID: 5221637492160390972, guid: ac06733c47d5d004c8f206d8944d25d7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.5
