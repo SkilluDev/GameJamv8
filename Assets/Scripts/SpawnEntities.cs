@@ -7,8 +7,10 @@ public class SpawnEntities : MonoBehaviour
     [SerializeField] float spawnRange = 50.0f;
     [SerializeField] int enemyCount = 30;
     [SerializeField] int mushroomCount = 10;
+    [SerializeField] int toxicMushroomCount = 10;
     [SerializeField] GameObject enemyPrefab;
     [SerializeField] GameObject mushroomPrefab;
+    [SerializeField] GameObject toxicMushroomPrefab;
 
     bool RandomPoint(Vector3 center, float range, out Vector3 result)
     {
@@ -43,7 +45,17 @@ public class SpawnEntities : MonoBehaviour
             if (RandomPoint(transform.position, spawnRange, out point))
             {
                 Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f);
-                Instantiate(mushroomPrefab, point+Vector3.up*1.68f, Quaternion.identity);
+                Instantiate(mushroomPrefab, point+Vector3.up, Quaternion.identity);
+            }
+        }
+
+        for (int i = 0; i < toxicMushroomCount; i++)
+        {
+            Vector3 point;
+            if (RandomPoint(transform.position, spawnRange, out point))
+            {
+                Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f);
+                Instantiate(toxicMushroomPrefab, point+Vector3.up, Quaternion.identity);
             }
         }
         

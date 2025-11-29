@@ -940,8 +940,10 @@ MonoBehaviour:
   spawnRange: 50
   enemyCount: 30
   mushroomCount: 10
+  toxicMushroomCount: 10
   enemyPrefab: {fileID: 1521201900798694369, guid: ac06733c47d5d004c8f206d8944d25d7, type: 3}
   mushroomPrefab: {fileID: 3997566305268803917, guid: 370676c60773a6f4c9c94fa8e49466ad, type: 3}
+  toxicMushroomPrefab: {fileID: 3997566305268803917, guid: ee8bcf21d68bce64bab457c66d9c8844, type: 3}
 --- !u!4 &1236471512 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4779761971491743066, guid: adbb4d003cf312b498d21775a863a0b0, type: 3}
