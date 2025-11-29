@@ -13,6 +13,9 @@ GameObject:
   - component: {fileID: 713375434491183146}
   - component: {fileID: 7579946347961865914}
   - component: {fileID: 2061553508221056424}
+  - component: {fileID: 6419633207969852648}
+  - component: {fileID: 1572784806506914300}
+  - component: {fileID: 1710306184760596751}
   m_Layer: 3
   m_Name: Enemy
   m_TagString: Untagged
@@ -149,3 +152,43 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.6399999, y: 0.53999996, z: 0.19999999}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6419633207969852648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521201900798694369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 473bcbdebe8856b408f5f10eb3bfcf01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyVision
+  speed: 4
+--- !u!114 &1572784806506914300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521201900798694369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30afbcb9a59a74f4399d75f1fda62752, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy
+  explosionPrefab: {fileID: 7429760702665913273, guid: bb96a59eb77685644b9c6f540bac9952, type: 3}
+  health: {fileID: 1710306184760596751}
+--- !u!114 &1710306184760596751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521201900798694369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dae98eb4be14bb0b137c6e7e3d0b963, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Health
+  maxHealth: 100

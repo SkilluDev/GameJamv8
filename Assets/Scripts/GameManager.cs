@@ -1,68 +1,110 @@
 using UnityEngine;
-using System; 
+using System;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-  public static GameManager Instance { get; private set; }
-
-  private void Awake()
-  {
-    if (Instance != null && Instance != this)
+    public enum GameOverReason
     {
-      Destroy(gameObject);
+        None,
+        TimeUp,
+        PlayerDead
     }
-    else
+
+    public GameOverReason LastGameOverReason { get; private set; } = GameOverReason.None;
+    private SceneChanger sceneChanger;
+    public static GameManager Instance { get; private set; }
+
+    public Transform cameraHolder;
+
+    private void Awake()
     {
-      Instance = this;
-      DontDestroyOnLoad(gameObject);
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+
+        if (sceneChanger == null)
+        {
+            sceneChanger = GetComponent<SceneChanger>();
+            if (sceneChanger == null) Debug.LogError("SceneChanger is null");
+        }
     }
-  }
 
-  [Header("Timer")]
-  [SerializeField] private float timeRemaining = 60f;
+    [Header("Timer")] [SerializeField] private float timeRemaining = 60f;
 
-  public float TimeRemaining => timeRemaining;
-  public static event Action OnTimerEnd; 
+    public float TimeRemaining => timeRemaining;
+    public static event Action OnTimerEnd;
 
-  private bool timerIsRunning = true;
+    private bool timerIsRunning = true;
 
-  void Update()
-  {
-    if (timerIsRunning)
+    void Update()
     {
-      if (timeRemaining > 0)
-      {
-        timeRemaining -= Time.deltaTime;
-      }
-      else
-      {
-        timeRemaining = 0;
-        timerIsRunning = false;
-        Debug.Log("Time has run out");
-        
-        OnTimerEnd?.Invoke();
-        
-        enabled = false; 
-      }
+        if (timerIsRunning)
+        {
+            if (timeRemaining > 0)
+            {
+                timeRemaining -= Time.deltaTime;
+            }
+            else
+            {
+                timeRemaining = 0;
+                timerIsRunning = false;
+                OnTimerEnd?.Invoke();
+                GameOverByTime();
+                enabled = false;
+            }
+        }
     }
-  }
 
-  public void AddMoreTime(float timeToAdd)
-  {
-    if (timeToAdd > 0)
+    public void AddMoreTime(float timeToAdd)
     {
-      timeRemaining += timeToAdd;
-      Debug.Log($"Added {timeToAdd} seconds");
-      
-      if (!timerIsRunning && timeRemaining > 0)
-      {
-        StartTimer();
-      }
-    }
-  }
+        if (timeToAdd > 0)
+        {
+            timeRemaining += timeToAdd;
+            Debug.Log($"Added {timeToAdd} seconds");
 
-  public void StartTimer()
-  {
-    timerIsRunning = true;
-  }
+            if (!timerIsRunning && timeRemaining > 0)
+            {
+                StartTimer();
+            }
+        }
+    }
+
+    public void StartTimer()
+    {
+        timerIsRunning = true;
+    }
+
+    public void LoadMenu()
+    {
+        sceneChanger?.LoadMenu();
+    }
+
+    public void LoadGame()
+    {
+        sceneChanger?.LoadGame();
+    }
+
+    public void LoadFinish()
+    {
+        sceneChanger?.LoadFinish();
+    }
+    public void GameOverByTime()
+    {
+        LastGameOverReason = GameOverReason.TimeUp;
+        sceneChanger?.LoadGameOver();
+    }
+
+    public void GameOverByDeath()
+    {
+        LastGameOverReason = GameOverReason.PlayerDead;
+        sceneChanger?.LoadGameOver();
+    }
+
 }

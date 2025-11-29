@@ -10,7 +10,7 @@ public class PlayerCollect : MonoBehaviour
 
     private void Awake()
     {
-        _gameManager  = GameObject.Find("GameManager").GetComponent<GameManager>();
+        _gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         _playerMovement = GetComponent<PlayerMovement>();
 
         if (_playerMovement is not null) _defaultSpeed = _playerMovement.movementSpeed;
@@ -24,17 +24,20 @@ public class PlayerCollect : MonoBehaviour
 
         if (other.CompareTag("Toxic Mushrooms"))
         {
-            
             if (_slowCoroutine is not null) StopCoroutine(_slowCoroutine);
-            
+
             _slowCoroutine = StartCoroutine(ToxicSlowCoroutine(10f));
+            Destroy(other.gameObject);
         }
         else if (other.CompareTag("Normal Mushrooms"))
-        { 
+        {
             _gameManager.AddMoreTime(30f);
+            Destroy(other.gameObject);
         }
-
-        Destroy(other.gameObject);
+        else if (other.CompareTag("End Door"))
+        {
+            _gameManager.LoadFinish();
+        }
     }
 
     private IEnumerator ToxicSlowCoroutine(float duration)
