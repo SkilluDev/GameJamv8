@@ -155,6 +155,7 @@ GameObject:
   - component: {fileID: 7995644963364249522}
   - component: {fileID: 9081269352965073018}
   - component: {fileID: 8850430367058526561}
+  - component: {fileID: 8238539464248574181}
   - component: {fileID: 4660463337238136633}
   - component: {fileID: 2201629505926835714}
   m_Layer: 7
@@ -225,6 +226,19 @@ MonoBehaviour:
   sprintMultiplier: 1.5
   movementSpeed: 10
   orientation: {fileID: 7798419351466091053}
+--- !u!114 &8238539464248574181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3354609493073994468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9f3fc22048446e4d864435e06cf4279, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  maxHealth: 100
 --- !u!114 &4660463337238136633
 MonoBehaviour:
   m_ObjectHideFlags: 0
