@@ -4,11 +4,13 @@ using UnityEngine;
 public class PlayerCollect : MonoBehaviour
 {
     private PlayerMovement _playerMovement;
+    private GameManager _gameManager;
     private float _defaultSpeed;
     private Coroutine _slowCoroutine;
 
     private void Awake()
     {
+        _gameManager  = GameObject.Find("GameManager").GetComponent<GameManager>();
         _playerMovement = GetComponent<PlayerMovement>();
 
         if (_playerMovement is not null) _defaultSpeed = _playerMovement.movementSpeed;
@@ -26,7 +28,10 @@ public class PlayerCollect : MonoBehaviour
             
             _slowCoroutine = StartCoroutine(ToxicSlowCoroutine(10f));
         }
-        else if (other.CompareTag("Normal Mushroom")) Debug.Log("Normal Mushroom Collected");
+        else if (other.CompareTag("Normal Mushroom"))
+        { 
+            _gameManager.AddMoreTime(30f);
+        }
 
         Destroy(other.gameObject);
     }
