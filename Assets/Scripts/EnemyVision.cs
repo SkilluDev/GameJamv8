@@ -2,29 +2,32 @@ using UnityEngine;
 
 public class EnemyVision : MonoBehaviour
 {
-    LayerMask _layerMask;
+    LayerMask _playerLayer;
     [SerializeField] GameObject playerTransform;
 
     void Awake()
     {
-        _layerMask = LayerMask.GetMask("Player");
-        Debug.Log(_layerMask.ToString());
+        _playerLayer = LayerMask.GetMask("Player");
+        Debug.Log(_playerLayer.ToString());
     }
 
     void FixedUpdate()
     {
         RaycastHit hit;
         Vector3 position = playerTransform.transform.position;
-        Vector3 direction = (transform.position - position).normalized;
+        Vector3 direction = (position - transform.position).normalized;
         
-        if(Physics.Raycast(position, direction, out hit, Mathf.Infinity, _layerMask))
+        if(Physics.Raycast(transform.position, direction, out hit, Mathf.Infinity))
         {
-            Debug.DrawRay(transform.position, direction * hit.distance, Color.yellow); 
-            Debug.Log("Line of sight");
-        }
-        else
-        {
-            Debug.DrawRay(position, direction * 1000, Color.white);
+            if ((_playerLayer & (1 << hit.transform.gameObject.layer)) != 0)
+            {
+                Debug.DrawRay(transform.position, direction * hit.distance, Color.yellow); 
+            }
+            else
+            {
+                Debug.DrawRay(transform.position, direction * 1000, Color.white);
+            }
+
         }
         
     }
