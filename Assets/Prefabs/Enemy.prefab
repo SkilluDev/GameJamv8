@@ -198,6 +198,7 @@ MonoBehaviour:
   maxHealth: 10
   deathSound: {fileID: 11400000, guid: 3364cf899e8c3c54d87b92f612d81d5e, type: 2}
   audioSource: {fileID: 8760059986234197427}
+  PlayAndDie: {fileID: 3207923135152602518, guid: 266dfbb2b187af14d94f0def2e6b4bc1, type: 3}
 --- !u!82 &8760059986234197427
 AudioSource:
   m_ObjectHideFlags: 0
