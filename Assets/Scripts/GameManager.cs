@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
 
     public GameOverReason LastGameOverReason { get; private set; } = GameOverReason.None;
     private SceneChanger sceneChanger;
+
+    public PlayerHealth playerHealth;
     public static GameManager Instance { get; private set; }
 
     public Transform cameraHolder;
