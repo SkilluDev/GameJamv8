@@ -6,6 +6,8 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     private float _currentHealth;
 
     [SerializeField] private HealthBar healthBar;
+    [SerializeField] private RandomSound deathSound;
+    [SerializeField] private AudioSource audioSource;
 
     private void Awake()
     {
@@ -30,6 +32,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
 
         if (_currentHealth <= 0f)
         {
+            deathSound.Play(audioSource);
             Die();
         }
     }
