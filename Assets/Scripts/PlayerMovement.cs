@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public bool canSprint = true;
     private bool _isSprinting;
     public float sprintMultiplier = 1.5f;
     public float movementSpeed;
@@ -40,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
     {
             
         _moveDirection = _horizontalInput * orientation.right + _verticalInput * orientation.forward;
-        if (_isSprinting)
+        if (_isSprinting && canSprint)
         {
             _rb.AddForce(_moveDirection.normalized * (movementSpeed*sprintMultiplier) * 10f, ForceMode.Force);
 

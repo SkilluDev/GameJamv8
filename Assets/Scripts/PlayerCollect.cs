@@ -22,14 +22,14 @@ public class PlayerCollect : MonoBehaviour
     {
         if (other.gameObject.layer != LayerMask.NameToLayer("Collectibles")) return;
 
-        if (other.CompareTag("Toxic Mushroom"))
+        if (other.CompareTag("Toxic Mushrooms"))
         {
             
             if (_slowCoroutine is not null) StopCoroutine(_slowCoroutine);
             
             _slowCoroutine = StartCoroutine(ToxicSlowCoroutine(10f));
         }
-        else if (other.CompareTag("Normal Mushroom"))
+        else if (other.CompareTag("Normal Mushrooms"))
         { 
             _gameManager.AddMoreTime(30f);
         }
@@ -42,9 +42,10 @@ public class PlayerCollect : MonoBehaviour
         if (_playerMovement is null) yield break;
 
         _playerMovement.movementSpeed = _defaultSpeed * 0.5f;
-
+        _playerMovement.canSprint = false;
         yield return new WaitForSeconds(duration);
         _playerMovement.movementSpeed = _defaultSpeed;
+        _playerMovement.canSprint = true;
         _slowCoroutine = null;
     }
 }
