@@ -34,6 +34,8 @@ public class SceneChanger : MonoBehaviour
     private IEnumerator BackToMenuAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         LoadMenu();
     }
 }
