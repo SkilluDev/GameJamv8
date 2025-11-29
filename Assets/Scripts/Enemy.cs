@@ -4,6 +4,10 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] private GameObject explosionPrefab;
     [SerializeField] private Health health;
+
+    [SerializeField] private RandomSound hitSound;
+
+    [SerializeField] private AudioSource audioSource;
     public void SpawnExplosion(Transform explosionTransform, Vector3 hitPoint)
     {
         Debug.DrawRay(explosionTransform.position, Vector3.up*10f, Color.red, 10f);
@@ -16,5 +20,6 @@ public class Enemy : MonoBehaviour
     {
         health.Damage(damage);
         SpawnExplosion(hitTransform, hitPoint);
+        hitSound.Play(audioSource);
     }
 }

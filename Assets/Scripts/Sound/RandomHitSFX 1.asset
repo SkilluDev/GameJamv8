@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 485830d6a74d5fc4fa4469cce119bd9d, type: 3}
+  m_Name: RandomHitSFX 1
+  m_EditorClassIdentifier: Assembly-CSharp::RandomSound
+  soundList:
+  - {fileID: 8300000, guid: 3c6838f63b6ac4d49ba0d51a37ecab89, type: 3}
+  - {fileID: 8300000, guid: 6fde3e8d67f5a0d44adf3214f0059994, type: 3}
+  - {fileID: 8300000, guid: 9102e8c48a35d4b4c99475699768b3d4, type: 3}
+  volume: 1
