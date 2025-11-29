@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    [Header("Timer")] [SerializeField] private float timeRemaining = 5f;
+    [Header("Timer")] [SerializeField] private float timeRemaining = 60f;
 
     public float TimeRemaining => timeRemaining;
     public static event Action OnTimerEnd;
