@@ -24,6 +24,7 @@ public class PlayerCollect : MonoBehaviour
 
         if (other.CompareTag("Toxic Mushroom"))
         {
+            
             if (_slowCoroutine is not null) StopCoroutine(_slowCoroutine);
             
             _slowCoroutine = StartCoroutine(ToxicSlowCoroutine(10f));

@@ -157,6 +157,7 @@ GameObject:
   - component: {fileID: 8850430367058526561}
   - component: {fileID: 4142774412721815435}
   - component: {fileID: 4660463337238136633}
+  - component: {fileID: 3159901634641792988}
   m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
@@ -221,6 +222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfcc1f043a01b1d469d59c01f24926b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  sprintMultiplier: 1.5
   movementSpeed: 10
   orientation: {fileID: 7798419351466091053}
 --- !u!114 &4142774412721815435
@@ -262,6 +264,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 575ccae07ace9ae41b924de05b38e8e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerCollect
+--- !u!114 &3159901634641792988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3354609493073994468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 125208b2a7e3a0640b158069e85e96bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInput
+  onMouseClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: ShootGun
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4274080527585137421
 GameObject:
   m_ObjectHideFlags: 0
