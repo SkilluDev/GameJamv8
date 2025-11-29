@@ -7,8 +7,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private SceneChanger sceneChanger;
     public static GameManager Instance { get; private set; }
 
-    private void Awake()
-    {
+  public Transform cameraHolder;
+
+  private void Awake()
+  {
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
@@ -24,7 +26,7 @@ public class GameManager : MonoBehaviour
             sceneChanger = GetComponent<SceneChanger>();
             if (sceneChanger == null) Debug.LogError("SceneChanger is null");
         }
-    }
+  }
 
     [Header("Timer")] [SerializeField] private float timeRemaining = 60f;
 

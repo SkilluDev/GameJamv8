@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class Billboard : MonoBehaviour
 {
-   [SerializeField]
    private Transform _cam;
     
-    private void Awake()
+    private void Start()
     {
+        _cam = GameManager.Instance.cameraHolder;
         if (_cam is null) Debug.Log("Camera null");
     }
 
