@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private SceneChanger sceneChanger;
+    private SceneChanger sceneChanger;
     public static GameManager Instance { get; private set; }
 
   public Transform cameraHolder;
