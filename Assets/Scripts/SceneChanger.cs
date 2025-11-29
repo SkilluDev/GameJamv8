@@ -23,13 +23,13 @@ public class SceneChanger : MonoBehaviour
     public void LoadFinish()
     {
         SceneManager.LoadScene(finishSceneName);
-        StartCoroutine(BackToMenuAfterDelay(15f));
+        StartCoroutine(BackToMenuAfterDelay(5f));
     }
 
     public void LoadGameOver()
     {
         SceneManager.LoadScene(gameOverSceneName);
-        StartCoroutine(BackToMenuAfterDelay(15f));
+        StartCoroutine(BackToMenuAfterDelay(5f));
     }
     private IEnumerator BackToMenuAfterDelay(float delay)
     {
