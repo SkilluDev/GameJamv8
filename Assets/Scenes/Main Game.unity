@@ -938,7 +938,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnEntities
   spawnRange: 50
-  enemyCount: 30
+  enemyCount: 15
   mushroomCount: 10
   toxicMushroomCount: 10
   enemyPrefab: {fileID: 1521201900798694369, guid: ac06733c47d5d004c8f206d8944d25d7, type: 3}
