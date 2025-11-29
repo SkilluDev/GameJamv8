@@ -4,10 +4,22 @@ public class EnemyVision : MonoBehaviour
 {
     LayerMask _playerLayer;
     [SerializeField] private float speed;
+    [SerializeField] GameObject playerHealth;
+    [SerializeField] float timeBetweenAttacks = 0.5f;
+    private float _attackTimeCounter;
+    [SerializeField] float damage;
+    private PlayerHealth _playerHealth;
+
+    private void Start()
+    {
+        _playerHealth = playerHealth.GetComponent<PlayerHealth>();
+    }
+
     void Awake()
     {
         _playerLayer = LayerMask.GetMask("Player");
         Debug.Log(_playerLayer.ToString());
+        _attackTimeCounter = timeBetweenAttacks;
     }
 
     void FixedUpdate()
@@ -18,7 +30,14 @@ public class EnemyVision : MonoBehaviour
             if ((_playerLayer & (1 << hit.transform.gameObject.layer)) != 0)
             {
                 Debug.DrawRay(transform.position, transform.forward * hit.distance, Color.yellow);
-                transform.position += transform.forward * (speed * Time.fixedDeltaTime);
+                if (hit.distance >= 1f)
+                    transform.position += transform.forward * (speed * Time.fixedDeltaTime);
+                if (hit.distance <= 1f && _attackTimeCounter >= timeBetweenAttacks)
+                {
+                    _playerHealth.Damage(damage);
+                    _attackTimeCounter = 0f;
+                }
+                _attackTimeCounter += Time.fixedDeltaTime;
             }
             else
             {

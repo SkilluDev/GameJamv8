@@ -164,6 +164,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyVision
   speed: 4
+  playerHealth: {fileID: 0}
+  timeBetweenAttacks: 0.5
+  damage: 10
 --- !u!114 &1572784806506914300
 MonoBehaviour:
   m_ObjectHideFlags: 0
