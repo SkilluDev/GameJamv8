@@ -1,27 +1,31 @@
 ﻿using System;
+using UnityEditor;
 using UnityEngine;
-    public class Health : MonoBehaviour, IDamageable
+using UnityEngine.Events;
+public class Health : MonoBehaviour, IDamageable
+{
+    [SerializeField] private float maxHealth;
+    private float _currentHealth;
+
+    
+
+    private void Start()
     {
-        [SerializeField] private float maxHealth;
-        private float _currentHealth;
+        _currentHealth = maxHealth;
+    }
 
-        private void Start()
+    public void Damage(float damage)
+    {
+        _currentHealth -= damage;
+        if (_currentHealth <= 0)
         {
-            _currentHealth = maxHealth;
-        }
-
-        public void Damage(float damage)
-        {
-            _currentHealth -= damage;
-            if (_currentHealth <= 0)
-            {
-                Die();
-            }
-        }
-
-        public bool hasTakenDamage { get; set; }
-        public void Die()
-        {
-            throw new NotImplementedException();
+            Die();
         }
     }
+
+    public bool hasTakenDamage { get; set; }
+    public void Die()
+    {
+        throw new NotImplementedException();
+    }
+}
