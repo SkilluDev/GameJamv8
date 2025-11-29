@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 624929542473589688}
   m_Layer: 6
   m_Name: Mushroom
-  m_TagString: Normal Mushroom
+  m_TagString: Toxic Mushrooms
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
