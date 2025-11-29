@@ -242,6 +242,11 @@ MonoBehaviour:
   gunShoot: {fileID: 1152322504, guid: b5fbf165ebec7064d9ff846a93ccbde5, type: 3}
   gunNormal: {fileID: 1191131472, guid: 42021fda574a6ee4f93ba205737a3bb7, type: 3}
   shootTime: 0.1
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  cameraPosition: {fileID: 0}
+  gunDamage: 1
 --- !u!1 &2516251323789681314
 GameObject:
   m_ObjectHideFlags: 0
@@ -387,7 +392,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 1
+  m_FillAmount: 0.777
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -403,6 +408,7 @@ GameObject:
   - component: {fileID: 6108326919440854290}
   - component: {fileID: 2673537721986744184}
   - component: {fileID: 6417449107350351672}
+  - component: {fileID: 9056596907711622728}
   m_Layer: 5
   m_Name: StatBar
   m_TagString: Untagged
@@ -470,6 +476,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &9056596907711622728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2623791182445705279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb4a8cf1e5b6a443881748f320461d51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthBar
+  bar: {fileID: 4720395145121222391}
 --- !u!1 &3520134804439968549
 GameObject:
   m_ObjectHideFlags: 0
@@ -715,7 +734,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 751e4000fd61ee745863f04e7f3d8f2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
-  gun: {fileID: 7247106989668524093}
 --- !u!1 &6150629369703282727
 GameObject:
   m_ObjectHideFlags: 0
@@ -774,7 +792,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_Color: {r: 0.16470589, g: 0.16470589, b: 0.16470589, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

@@ -326,6 +326,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5998895568761857544, guid: f9d87578d14168f4b921a564a032f7da, type: 3}
   m_PrefabInstance: {fileID: 631064586}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &719593968 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7247106989668524093, guid: f4acb142282bdb74da7c70bcd77f6520, type: 3}
+  m_PrefabInstance: {fileID: 3370259757307803607}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85f5392dfebe2b447b4187dc05698457, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GunManager
 --- !u!1001 &803005857
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1535,6 +1546,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7247106989668524093, guid: f4acb142282bdb74da7c70bcd77f6520, type: 3}
+      propertyPath: gunDamage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7247106989668524093, guid: f4acb142282bdb74da7c70bcd77f6520, type: 3}
+      propertyPath: cameraPosition
+      value: 
+      objectReference: {fileID: 352841664}
+    - target: {fileID: 7247106989668524093, guid: f4acb142282bdb74da7c70bcd77f6520, type: 3}
+      propertyPath: enemyLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8492554821871389216, guid: f4acb142282bdb74da7c70bcd77f6520, type: 3}
       propertyPath: m_SizeDelta.x
       value: 500
@@ -1547,17 +1570,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1647592028}
   m_SourcePrefab: {fileID: 100100000, guid: f4acb142282bdb74da7c70bcd77f6520, type: 3}
---- !u!114 &3370259757307803609 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7408487060609531913, guid: f4acb142282bdb74da7c70bcd77f6520, type: 3}
-  m_PrefabInstance: {fileID: 3370259757307803607}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 751e4000fd61ee745863f04e7f3d8f2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIManager
 --- !u!1001 &3473040923211278307
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1825,9 +1837,33 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 352841664}
     - target: {fileID: 2201629505926835714, guid: e7f21f34d50e38947a97a8c924b31239, type: 3}
+      propertyPath: onMouseClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2201629505926835714, guid: e7f21f34d50e38947a97a8c924b31239, type: 3}
+      propertyPath: onMouseClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2201629505926835714, guid: e7f21f34d50e38947a97a8c924b31239, type: 3}
       propertyPath: onMouseClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 3370259757307803609}
+      objectReference: {fileID: 719593968}
+    - target: {fileID: 2201629505926835714, guid: e7f21f34d50e38947a97a8c924b31239, type: 3}
+      propertyPath: onMouseClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2201629505926835714, guid: e7f21f34d50e38947a97a8c924b31239, type: 3}
+      propertyPath: onMouseClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Shoot
+      objectReference: {fileID: 0}
+    - target: {fileID: 2201629505926835714, guid: e7f21f34d50e38947a97a8c924b31239, type: 3}
+      propertyPath: onMouseClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GunManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2201629505926835714, guid: e7f21f34d50e38947a97a8c924b31239, type: 3}
+      propertyPath: onMouseClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3354609493073994468, guid: e7f21f34d50e38947a97a8c924b31239, type: 3}
       propertyPath: m_Name
       value: Player
