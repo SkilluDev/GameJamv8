@@ -130,7 +130,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a7f87850d25b9a4ca27f25d021095ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Billboard
-  _cam: {fileID: 0}
 --- !u!65 &2061553508221056424
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -191,4 +190,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dae98eb4be14bb0b137c6e7e3d0b963, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
-  maxHealth: 100
+  maxHealth: 3
