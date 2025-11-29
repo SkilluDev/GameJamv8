@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    private bool _isSprinting;
+    public float sprintMultiplier = 1.5f;
     public float movementSpeed;
     public Transform orientation;
     private float _horizontalInput;
@@ -29,13 +31,24 @@ public class PlayerMovement : MonoBehaviour
 
     private void MyInput()
     {
+        _isSprinting = Input.GetKey(KeyCode.LeftShift);
         _horizontalInput = Input.GetAxisRaw("Horizontal");
         _verticalInput = Input.GetAxisRaw("Vertical");
     }
 
     private void MovePlayer()
     {
+            
         _moveDirection = _horizontalInput * orientation.right + _verticalInput * orientation.forward;
-        _rb.AddForce(_moveDirection.normalized * movementSpeed * 10f, ForceMode.Force);
+        if (_isSprinting)
+        {
+            _rb.AddForce(_moveDirection.normalized * (movementSpeed*sprintMultiplier) * 10f, ForceMode.Force);
+
+        }
+        else
+        {
+            _rb.AddForce(_moveDirection.normalized * movementSpeed * 10f, ForceMode.Force);
+
+        }
     }
 }
