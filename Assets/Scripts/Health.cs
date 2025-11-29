@@ -26,6 +26,6 @@ public class Health : MonoBehaviour, IDamageable
     public bool hasTakenDamage { get; set; }
     public void Die()
     {
-        throw new NotImplementedException();
+        Destroy(gameObject);
     }
 }

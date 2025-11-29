@@ -280,7 +280,7 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 8
-  gunDamage: 0
+  gunDamage: 1
 --- !u!1 &4274080527585137421
 GameObject:
   m_ObjectHideFlags: 0
