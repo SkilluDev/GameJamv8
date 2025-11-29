@@ -9,6 +9,8 @@ public class PlayerInput : MonoBehaviour
 
     [SerializeField] private LayerMask enemyLayer;
 
+    [SerializeField] private float gunDamage;
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -28,7 +30,8 @@ public class PlayerInput : MonoBehaviour
             Debug.Log("hittt" + hit.distance+"layer"+hit.transform.gameObject.layer);
             if((enemyLayer & (1 << hit.transform.gameObject.layer)) != 0)
             {
-                Debug.Log("enemy");
+                Enemy enemy = hit.transform.gameObject.GetComponent<Enemy>();
+                enemy.Damage(gunDamage, hit.transform, hit.point);
             }
         }
     }
