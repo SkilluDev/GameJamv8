@@ -4,13 +4,21 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public enum GameOverReason
+    {
+        None,
+        TimeUp,
+        PlayerDead
+    }
+
+    public GameOverReason LastGameOverReason { get; private set; } = GameOverReason.None;
     private SceneChanger sceneChanger;
     public static GameManager Instance { get; private set; }
 
-  public Transform cameraHolder;
+    public Transform cameraHolder;
 
-  private void Awake()
-  {
+    private void Awake()
+    {
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
@@ -26,7 +34,7 @@ public class GameManager : MonoBehaviour
             sceneChanger = GetComponent<SceneChanger>();
             if (sceneChanger == null) Debug.LogError("SceneChanger is null");
         }
-  }
+    }
 
     [Header("Timer")] [SerializeField] private float timeRemaining = 60f;
 
@@ -48,7 +56,7 @@ public class GameManager : MonoBehaviour
                 timeRemaining = 0;
                 timerIsRunning = false;
                 OnTimerEnd?.Invoke();
-                LoadGameOver();
+                GameOverByTime();
                 enabled = false;
             }
         }
@@ -72,6 +80,7 @@ public class GameManager : MonoBehaviour
     {
         timerIsRunning = true;
     }
+
     public void LoadMenu()
     {
         sceneChanger?.LoadMenu();
@@ -86,9 +95,16 @@ public class GameManager : MonoBehaviour
     {
         sceneChanger?.LoadFinish();
     }
-
-    public void LoadGameOver()
+    public void GameOverByTime()
     {
+        LastGameOverReason = GameOverReason.TimeUp;
         sceneChanger?.LoadGameOver();
     }
+
+    public void GameOverByDeath()
+    {
+        LastGameOverReason = GameOverReason.PlayerDead;
+        sceneChanger?.LoadGameOver();
+    }
+
 }
