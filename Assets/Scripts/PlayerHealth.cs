@@ -1,29 +1,41 @@
-using System;
 using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour, IDamageable
 {
-    [SerializeField] float maxHealth = 100f;
-    float _currentHealth;
+    [SerializeField] private float maxHealth = 100f;
+    private float _currentHealth;
+
+    [SerializeField] private HealthBar healthBar;
 
     private void Awake()
     {
         _currentHealth = maxHealth;
+        
+        if (healthBar != null)
+            healthBar.SetHealth(1f);
+        else
+            Debug.LogWarning("PlayerHealth: HealthBar is not assigned!");
     }
+
+    public bool hasTakenDamage { get; set; }
 
     public void Damage(float damage)
     {
         _currentHealth -= damage;
-        Debug.Log(_currentHealth);
-        if (_currentHealth <= 0)
+        _currentHealth = Mathf.Clamp(_currentHealth, 0f, maxHealth);
+
+        if (healthBar is not null)
+            healthBar.SetHealth(_currentHealth / maxHealth);
+        hasTakenDamage = true;
+
+        if (_currentHealth <= 0f)
         {
             Die();
         }
     }
 
-    public bool hasTakenDamage { get; set; }
     public void Die()
     {
-        throw new System.NotImplementedException();
+        GameManager.Instance.GameOverByDeath();
     }
 }
