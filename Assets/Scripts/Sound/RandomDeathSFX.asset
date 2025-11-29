@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 485830d6a74d5fc4fa4469cce119bd9d, type: 3}
   m_Name: RandomDeathSFX
   m_EditorClassIdentifier: Assembly-CSharp::RandomSound
-  soundList: []
+  soundList:
+  - {fileID: 8300000, guid: c7e1afa8ecaf19a42876096a9e9365aa, type: 3}
+  - {fileID: 8300000, guid: 96d263eeaae70f8409af96ef68d9c768, type: 3}
   volume: 1

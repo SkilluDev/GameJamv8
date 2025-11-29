@@ -4,7 +4,6 @@ public class EnemyVision : MonoBehaviour
 {
     LayerMask _playerLayer;
     [SerializeField] private float speed;
-    [SerializeField] GameObject playerHealth;
     [SerializeField] float timeBetweenAttacks = 0.5f;
     private float _attackTimeCounter;
     [SerializeField] float damage;
@@ -12,8 +11,8 @@ public class EnemyVision : MonoBehaviour
 
     private void Start()
     {
-        _playerHealth = playerHealth.GetComponent<PlayerHealth>();
-    }
+        _playerHealth = GameManager.Instance.playerHealth;
+   }
 
     void Awake()
     {
