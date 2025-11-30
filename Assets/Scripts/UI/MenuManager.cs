@@ -12,6 +12,7 @@ namespace UI
 
     [SerializeField] private string _menuScene = "Menu";
     [SerializeField] private string _gameScene = "Main Game";
+    [SerializeField] private string _cutsceneScene = "Cutscene";
 
     [SerializeField] private GameObject _background;
     [SerializeField] private GameObject _mainView; 
@@ -64,7 +65,7 @@ namespace UI
 
     public void StartClicked()
     {
-      SceneManager.LoadScene(_gameScene);
+      SceneManager.LoadScene(_cutsceneScene);
     }
 
     public void InstructionsClicked()
