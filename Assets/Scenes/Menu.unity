@@ -441,6 +441,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI_Menu
       objectReference: {fileID: 0}
+    - target: {fileID: 2436844099364038889, guid: c304c5290f0714a4581cefcd581b5b9d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2566855551917721787, guid: c304c5290f0714a4581cefcd581b5b9d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -501,6 +505,43 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4637975894668015195, guid: c304c5290f0714a4581cefcd581b5b9d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 69.99988
+      objectReference: {fileID: 0}
+    - target: {fileID: 4637975894668015195, guid: c304c5290f0714a4581cefcd581b5b9d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 35.00006
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861477698299389486, guid: c304c5290f0714a4581cefcd581b5b9d, type: 3}
+      propertyPath: m_text
+      value: "assets\n--------------------------------------------------------------------------------------------\nwall,
+        road, door textures, window - https://ambientcg.com CC0\nexplosion - https://opengameart.org/content/explosion
+        CC0\ngun model - https://opengameart.org/content/gununtextured CC0\ngunshot
+        - https://opengameart.org/content/simple-explosion-bleeds-game-art CCBY\nhealth
+        bar - https://opengameart.org/content/enemy-health-bars CC0\nmushroom - https://opengameart.org/content/large-mushroom
+        CCBY\nmusic - https://opengameart.org/content/random-gods-dark-and-silent
+        CCBY\nboomba - https://opengameart.org/content/enemy-round-basic-brown CCBY\nlamp
+        post - https://opengameart.org/content/2d-platformer-side-scroller-stone-fence-street-lamp
+        CC0\nfootsteps - https://opengameart.org/content/footsteps-leather-cloth-armor
+        ccby\nquestion mark & coins - https://opengameart.org/content/inventory-filter-icons
+        CC0\r\nexit sign - https://opengameart.org/content/exit-sign-64 CCBY\r\nwallpaper
+        - https://www.freepik.com/free-photo/green-grass-field-blue-sky_2765774.htm\r\nblood
+        - https://opengameart.org/content/blood-splatter + https://opengameart.org/content/blood-overlay
+        CC0\r\nsonic - https://opengameart.org/content/theo-the-teddy ccby\r\ncrunch
+        - https://opengameart.org/content/5-break-crunch-impacts cc0\n---------------------------------------------------------------------------------------------\n\n\nSoftware
+        & Content\n\n--------\nAli Emir Celik\nIgor Sienkiewicz\nDarya Sharnevich\nFranciszek
+        Postrzygacz\n-------------------------\n\nSound actors \n\n--------------\nAli
+        Emir Celik\nFranciszek Postrzygacz\nJuliusz Trochimczuk (enemy sound)\n-----------------------------------"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861477698299389486, guid: c304c5290f0714a4581cefcd581b5b9d, type: 3}
+      propertyPath: m_fontSize
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861477698299389486, guid: c304c5290f0714a4581cefcd581b5b9d, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 24
+      objectReference: {fileID: 0}
     - target: {fileID: 6645009071223640161, guid: c304c5290f0714a4581cefcd581b5b9d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -516,6 +557,10 @@ PrefabInstance:
     - target: {fileID: 6645009071223640161, guid: c304c5290f0714a4581cefcd581b5b9d, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7623794145580784739, guid: c304c5290f0714a4581cefcd581b5b9d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 7755696451987103441, guid: c304c5290f0714a4581cefcd581b5b9d, type: 3}
       propertyPath: m_Pivot.x
