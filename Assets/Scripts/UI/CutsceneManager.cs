@@ -13,6 +13,8 @@ public class CutsceneManager : MonoBehaviour
 
   void EndReached(VideoPlayer vp)
   {
+    vp.Stop();
+    vp.gameObject.SetActive(false);
     SceneManager.LoadScene("Main Game");
   }
 }
