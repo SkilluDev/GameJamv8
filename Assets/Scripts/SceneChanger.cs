@@ -36,6 +36,7 @@ public class SceneChanger : MonoBehaviour
         yield return new WaitForSeconds(delay);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        GameManager.Nullify();
         LoadMenu();
     }
 }

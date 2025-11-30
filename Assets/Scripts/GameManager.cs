@@ -109,4 +109,9 @@ public class GameManager : MonoBehaviour
         sceneChanger?.LoadGameOver();
     }
 
+    public static void Nullify()
+    {
+        Instance = null;
+    }
+
 }
