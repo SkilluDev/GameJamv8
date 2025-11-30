@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -32,6 +33,7 @@ public class DoorSpawner : MonoBehaviour
         Collider[] hitColliders = Physics.OverlapSphere(center, radius, layerMask);
         float maxDistance = 0f;
         Collider maxCollider = hitColliders[0];
+        if(hitColliders.Count() == 0) Debug.LogError("Zero door spaces");
         foreach (var hitCollider in hitColliders)
         {
             var distance = Vector3.Distance(hitCollider.gameObject.transform.position, center);
