@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3530815212202982477}
   - component: {fileID: 6452433281529163982}
   - component: {fileID: 2899754289618328809}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: TimerText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,7 +163,7 @@ GameObject:
   - component: {fileID: 3582316574645169105}
   - component: {fileID: 7247106989668524093}
   - component: {fileID: 389876683420134313}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -358,7 +358,7 @@ GameObject:
   - component: {fileID: 2391518789922094835}
   - component: {fileID: 7057230286366538197}
   - component: {fileID: 6854024427834348049}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: StatBarBG (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -433,7 +433,7 @@ GameObject:
   - component: {fileID: 5814540633300174533}
   - component: {fileID: 5571586034748688064}
   - component: {fileID: 9186456916306669664}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: Crosshair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -508,7 +508,7 @@ GameObject:
   - component: {fileID: 7256249576513539750}
   - component: {fileID: 523922119231979061}
   - component: {fileID: 4720395145121222391}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -584,7 +584,7 @@ GameObject:
   - component: {fileID: 2673537721986744184}
   - component: {fileID: 6417449107350351672}
   - component: {fileID: 9056596907711622728}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: StatBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -674,7 +674,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3653405600037045388}
   - component: {fileID: 5798316996924261385}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: FillMask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -726,7 +726,7 @@ GameObject:
   - component: {fileID: 7370559915255650571}
   - component: {fileID: 7985756214809302307}
   - component: {fileID: 2566718864648509388}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: Foreground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -803,7 +803,7 @@ GameObject:
   - component: {fileID: 6660240335052131740}
   - component: {fileID: 4992206287791701994}
   - component: {fileID: 7408487060609531913}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -845,7 +845,7 @@ Canvas:
   m_GameObject: {fileID: 6004860491722170248}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -922,7 +922,7 @@ GameObject:
   - component: {fileID: 8492554821871389216}
   - component: {fileID: 9196083403871120502}
   - component: {fileID: 3243768268110859335}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -997,13 +997,13 @@ GameObject:
   - component: {fileID: 3956076935694365726}
   - component: {fileID: 5190082690608612845}
   - component: {fileID: 8664647701462762864}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: CameraView
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3956076935694365726
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1069,7 +1069,7 @@ GameObject:
   - component: {fileID: 4592379116411751533}
   - component: {fileID: 4658221185213405328}
   - component: {fileID: 3550062401874947795}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: StatBarBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
