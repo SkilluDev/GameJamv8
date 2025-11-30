@@ -1,4 +1,5 @@
 using System;
+using Unity.Cinemachine;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -13,8 +14,12 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 _moveDirection;
     [SerializeField] private RandomSound stepSound;
     [SerializeField] private AudioSource audioSource;
+
+    [SerializeField] private CinemachineImpulseSource cinemachineImpulseSource;
     private float timer = 0f;
     private float timePerStep = 0.25f;
+
+    private float sineTimer = 0f;
 
     private Rigidbody _rb;
 
@@ -47,24 +52,38 @@ public class PlayerMovement : MonoBehaviour
         if (_isSprinting && canSprint)
         {
             timer += Time.deltaTime;
+            sineTimer += Time.deltaTime*Mathf.PI/timePerStep;
+
             if (timer >= timePerStep)
             {
                 timer = 0f;
-                stepSound.Play(audioSource);
+                Step();
             }
 
             _rb.AddForce(_moveDirection.normalized * (movementSpeed * sprintMultiplier) * 10f, ForceMode.Force);
         }
-        else
+        else if(_moveDirection!=Vector3.zero)
         {
             timer += Time.deltaTime / 2;
+            sineTimer += (Time.deltaTime/2)*Mathf.PI/timePerStep;
+
             if (timer >= timePerStep)
             {
                 timer = 0f;
-                stepSound.Play(audioSource);
+                Step();
             }
 
             _rb.AddForce(_moveDirection.normalized * movementSpeed * 10f, ForceMode.Force);
         }
+    }
+
+    private void Step()
+    {
+        stepSound.Play(audioSource);
+        float currentSine = Mathf.Sin(sineTimer);
+        Debug.Log("sine=" + currentSine);
+        Vector3 bounce;
+        bounce = new Vector3(currentSine/3, -0.1f, 0);
+        cinemachineImpulseSource.GenerateImpulse(bounce);
     }
 }
