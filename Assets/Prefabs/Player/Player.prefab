@@ -227,6 +227,8 @@ MonoBehaviour:
   sprintMultiplier: 1.5
   movementSpeed: 10
   orientation: {fileID: 7798419351466091053}
+  stepSound: {fileID: 11400000, guid: 7fbc76ed603ccb84da07e4bbea704b94, type: 2}
+  audioSource: {fileID: 5867679609421244223}
 --- !u!114 &8238539464248574181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,6 +257,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 575ccae07ace9ae41b924de05b38e8e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerCollect
+  eatingSound: {fileID: 11400000, guid: c57a962abadfff1419732d379facb3a2, type: 2}
+  audioSource: {fileID: 5867679609421244223}
 --- !u!114 &2201629505926835714
 MonoBehaviour:
   m_ObjectHideFlags: 0
