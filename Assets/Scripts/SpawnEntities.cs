@@ -6,10 +6,12 @@ public class SpawnEntities : MonoBehaviour
 {
     [SerializeField] float spawnRange = 50.0f;
     [SerializeField] float minEnemySpawnRange = 10.0f;
-    [SerializeField] int enemyCount = 30;
+    [SerializeField] int enemyCount = 10;
+    [SerializeField] int enemy2Count = 10;
     [SerializeField] int mushroomCount = 10;
     [SerializeField] int toxicMushroomCount = 10;
     [SerializeField] GameObject enemyPrefab;
+    [SerializeField] GameObject enemy2Prefab;
     [SerializeField] GameObject mushroomPrefab;
     [SerializeField] GameObject toxicMushroomPrefab;
 
@@ -50,13 +52,23 @@ public class SpawnEntities : MonoBehaviour
     }
     void Start()
     {
-        for(int i = 0; i < enemyCount; i++)
+        for (int i = 0; i < enemyCount; i++)
         {
             Vector3 point;
             if (RandomPointFurtherThan(transform.position, spawnRange, minEnemySpawnRange, out point))
             {
                 Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f);
-                Instantiate(enemyPrefab, point+Vector3.up*1.68f, Quaternion.identity);
+                Instantiate(enemyPrefab, point + Vector3.up * 1.68f, Quaternion.identity);
+            }
+        }
+        
+        for(int i = 0; i < enemy2Count; i++)
+        {
+            Vector3 point;
+            if (RandomPointFurtherThan(transform.position, spawnRange, minEnemySpawnRange, out point))
+            {
+                Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f);
+                Instantiate(enemy2Prefab, point+Vector3.up*1.68f, Quaternion.identity);
             }
         }
 
