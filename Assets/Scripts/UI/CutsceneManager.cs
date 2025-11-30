@@ -8,6 +8,7 @@ public class CutsceneManager : MonoBehaviour
 
   void Start()
   {
+    SceneManager.LoadScene("Main Game");
     videoPlayer.loopPointReached += EndReached;
   }
 
