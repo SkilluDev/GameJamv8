@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 1701004989375672261}
   - component: {fileID: 8209811898958784279}
   - component: {fileID: 8654596633720364105}
+  - component: {fileID: 8264465026959194812}
   m_Layer: 9
   m_Name: Wall
   m_TagString: Untagged
@@ -145,6 +146,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5707038290668534169}
+  - {fileID: 5303865184853316857}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -90}
 --- !u!33 &1701004989375672261
@@ -225,3 +227,87 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &8264465026959194812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2688474683047618961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dbc989f868862847a622719e70837af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WallManager
+  door: {fileID: 694802067132225134}
+--- !u!1001 &886954585924400865
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4388937223848969197}
+    m_Modifications:
+    - target: {fileID: 426565103596527759, guid: 0fae4f18da715fb4995b9c3077697917, type: 3}
+      propertyPath: m_Name
+      value: Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 426565103596527759, guid: 0fae4f18da715fb4995b9c3077697917, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5031652421593670168, guid: 0fae4f18da715fb4995b9c3077697917, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5031652421593670168, guid: 0fae4f18da715fb4995b9c3077697917, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5031652421593670168, guid: 0fae4f18da715fb4995b9c3077697917, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5031652421593670168, guid: 0fae4f18da715fb4995b9c3077697917, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5031652421593670168, guid: 0fae4f18da715fb4995b9c3077697917, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5031652421593670168, guid: 0fae4f18da715fb4995b9c3077697917, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5031652421593670168, guid: 0fae4f18da715fb4995b9c3077697917, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5031652421593670168, guid: 0fae4f18da715fb4995b9c3077697917, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5031652421593670168, guid: 0fae4f18da715fb4995b9c3077697917, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5031652421593670168, guid: 0fae4f18da715fb4995b9c3077697917, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0fae4f18da715fb4995b9c3077697917, type: 3}
+--- !u!1 &694802067132225134 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 426565103596527759, guid: 0fae4f18da715fb4995b9c3077697917, type: 3}
+  m_PrefabInstance: {fileID: 886954585924400865}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5303865184853316857 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5031652421593670168, guid: 0fae4f18da715fb4995b9c3077697917, type: 3}
+  m_PrefabInstance: {fileID: 886954585924400865}
+  m_PrefabAsset: {fileID: 0}
