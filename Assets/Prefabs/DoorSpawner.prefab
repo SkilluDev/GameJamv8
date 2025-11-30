@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorSpawner
   bigSpawnRange: 50
   smallSpawnRange: 20
-  doorCheckRadius: 15
+  doorCheckRadius: 25
   layerMask:
     serializedVersion: 2
     m_Bits: 512

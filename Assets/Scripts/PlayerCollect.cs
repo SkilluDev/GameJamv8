@@ -4,7 +4,6 @@ using UnityEngine;
 public class PlayerCollect : MonoBehaviour
 {
     private PlayerMovement _playerMovement;
-    private GameManager _gameManager;
     private float _defaultSpeed;
     private Coroutine _slowCoroutine;
     [SerializeField] private RandomSound eatingSound;
@@ -12,7 +11,6 @@ public class PlayerCollect : MonoBehaviour
 
     private void Awake()
     {
-        _gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         _playerMovement = GetComponent<PlayerMovement>();
 
         if (_playerMovement is not null) _defaultSpeed = _playerMovement.movementSpeed;
@@ -35,12 +33,12 @@ public class PlayerCollect : MonoBehaviour
         else if (other.CompareTag("Normal Mushrooms"))
         {
             eatingSound.Play(audioSource);
-            _gameManager.AddMoreTime(30f);
+            GameManager.Instance.AddMoreTime(30f);
             Destroy(other.gameObject);
         }
         else if (other.CompareTag("End Door"))
         {
-            _gameManager.LoadFinish();
+            GameManager.Instance.LoadFinish();
         }
     }
 
