@@ -2086,6 +2086,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8702143176914327860, guid: e29e2b9ff468f3149af3843bd7c1f2aa, type: 3}
+      propertyPath: enemyCount
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2107,6 +2111,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4660463337238136633, guid: e7f21f34d50e38947a97a8c924b31239, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1986883768}
+    - target: {fileID: 4660463337238136633, guid: e7f21f34d50e38947a97a8c924b31239, type: 3}
+      propertyPath: eatingSound
+      value: 
+      objectReference: {fileID: 11400000, guid: c57a962abadfff1419732d379facb3a2, type: 2}
     - target: {fileID: 7995644963364249522, guid: e7f21f34d50e38947a97a8c924b31239, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.02732

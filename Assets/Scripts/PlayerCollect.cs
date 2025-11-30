@@ -7,6 +7,8 @@ public class PlayerCollect : MonoBehaviour
     private GameManager _gameManager;
     private float _defaultSpeed;
     private Coroutine _slowCoroutine;
+    [SerializeField] private RandomSound eatingSound;
+    [SerializeField] private AudioSource audioSource;
 
     private void Awake()
     {
@@ -24,6 +26,7 @@ public class PlayerCollect : MonoBehaviour
 
         if (other.CompareTag("Toxic Mushrooms"))
         {
+            eatingSound.Play(audioSource);
             if (_slowCoroutine is not null) StopCoroutine(_slowCoroutine);
 
             _slowCoroutine = StartCoroutine(ToxicSlowCoroutine(10f));
@@ -31,6 +34,7 @@ public class PlayerCollect : MonoBehaviour
         }
         else if (other.CompareTag("Normal Mushrooms"))
         {
+            eatingSound.Play(audioSource);
             _gameManager.AddMoreTime(30f);
             Destroy(other.gameObject);
         }
