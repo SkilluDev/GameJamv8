@@ -19,10 +19,12 @@ namespace UI
     [SerializeField] private GameObject _instructionsView;
     [SerializeField] private GameObject _creditsView;
 
-
+    private bool cutscenePlayed;
 
     private void Awake()
     {
+      cutscenePlayed = PlayerPrefs.GetInt("CutscenePlayed", 0) == 1;
+
       if (Instance != null && Instance != this)
       {
         Destroy(gameObject);
@@ -30,7 +32,6 @@ namespace UI
       }
 
       Instance = this;
-      DontDestroyOnLoad(gameObject);
     }
 
     private void OnEnable()
@@ -65,6 +66,14 @@ namespace UI
 
     public void StartClicked()
     {
+      if (cutscenePlayed)
+      {
+        SceneManager.LoadScene(_gameScene);
+        return;
+      }
+
+      cutscenePlayed = true;
+      PlayerPrefs.SetInt("CutscenePlayed", 1);
       SceneManager.LoadScene(_cutsceneScene);
     }
 
@@ -91,11 +100,11 @@ namespace UI
 
     public void ExitClicked()
     {
-    #if UNITY_EDITOR
-      EditorApplication.isPlaying = false;
-    #else
-      Application.Quit();
-    #endif
+      #if UNITY_EDITOR
+        EditorApplication.isPlaying = false;
+      #else
+        Application.Quit();
+      #endif
     }
   }
 }
