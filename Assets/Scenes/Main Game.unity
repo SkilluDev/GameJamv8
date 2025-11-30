@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &149363547 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4777914830402900980, guid: f4acb142282bdb74da7c70bcd77f6520, type: 3}
+  m_PrefabInstance: {fileID: 3370259757307803607}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &215061463
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -382,6 +387,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1389562528294433455, guid: d685645259bd12b47819a852f8d18caa, type: 3}
   m_PrefabInstance: {fileID: 1792333742}
   m_PrefabAsset: {fileID: 0}
+--- !u!225 &655860990 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 3442555622043157046, guid: f4acb142282bdb74da7c70bcd77f6520, type: 3}
+  m_PrefabInstance: {fileID: 3370259757307803607}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &655860991 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6418707747902369626, guid: f4acb142282bdb74da7c70bcd77f6520, type: 3}
+  m_PrefabInstance: {fileID: 3370259757307803607}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d471494e46dab9949955f0ace846888f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BloodManager
 --- !u!114 &719593968 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7247106989668524093, guid: f4acb142282bdb74da7c70bcd77f6520, type: 3}
@@ -393,6 +414,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85f5392dfebe2b447b4187dc05698457, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GunManager
+--- !u!1 &775702995 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8168263416642536892, guid: f4acb142282bdb74da7c70bcd77f6520, type: 3}
+  m_PrefabInstance: {fileID: 3370259757307803607}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &803005857
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1790,6 +1816,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3442555622043157046, guid: f4acb142282bdb74da7c70bcd77f6520, type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4173920626037385947, guid: f4acb142282bdb74da7c70bcd77f6520, type: 3}
       propertyPath: m_Camera
       value: 
@@ -1878,6 +1908,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6418707747902369626, guid: f4acb142282bdb74da7c70bcd77f6520, type: 3}
+      propertyPath: canvasGroup
+      value: 
+      objectReference: {fileID: 655860990}
+    - target: {fileID: 6418707747902369626, guid: f4acb142282bdb74da7c70bcd77f6520, type: 3}
+      propertyPath: bloodOverlay
+      value: 
+      objectReference: {fileID: 149363547}
+    - target: {fileID: 6418707747902369626, guid: f4acb142282bdb74da7c70bcd77f6520, type: 3}
+      propertyPath: alphaPerFrame
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418707747902369626, guid: f4acb142282bdb74da7c70bcd77f6520, type: 3}
+      propertyPath: bloodSplatter
+      value: 
+      objectReference: {fileID: 775702995}
     - target: {fileID: 7247106989668524093, guid: f4acb142282bdb74da7c70bcd77f6520, type: 3}
       propertyPath: cameraPosition
       value: 
@@ -2412,6 +2458,34 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 837091378}
+    - target: {fileID: 8238539464248574181, guid: e7f21f34d50e38947a97a8c924b31239, type: 3}
+      propertyPath: onPlayerDamage.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8238539464248574181, guid: e7f21f34d50e38947a97a8c924b31239, type: 3}
+      propertyPath: onPlayerDamage.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8238539464248574181, guid: e7f21f34d50e38947a97a8c924b31239, type: 3}
+      propertyPath: onPlayerDamage.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 655860991}
+    - target: {fileID: 8238539464248574181, guid: e7f21f34d50e38947a97a8c924b31239, type: 3}
+      propertyPath: onPlayerDamage.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8238539464248574181, guid: e7f21f34d50e38947a97a8c924b31239, type: 3}
+      propertyPath: onPlayerDamage.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ApplyBlood
+      objectReference: {fileID: 0}
+    - target: {fileID: 8238539464248574181, guid: e7f21f34d50e38947a97a8c924b31239, type: 3}
+      propertyPath: onPlayerDamage.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BloodManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8238539464248574181, guid: e7f21f34d50e38947a97a8c924b31239, type: 3}
+      propertyPath: onPlayerDamage.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

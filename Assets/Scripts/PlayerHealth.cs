@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerHealth : MonoBehaviour, IDamageable
 {
@@ -8,6 +9,8 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     [SerializeField] private HealthBar healthBar;
     [SerializeField] private RandomSound deathSound;
     [SerializeField] private AudioSource audioSource;
+
+    public UnityEvent onPlayerDamage;
 
     private void Awake()
     {
@@ -29,6 +32,8 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         if (healthBar is not null)
             healthBar.SetHealth(_currentHealth / maxHealth);
         hasTakenDamage = true;
+
+        onPlayerDamage.Invoke();
 
         if (_currentHealth <= 0f)
         {
