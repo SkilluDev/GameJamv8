@@ -111,7 +111,9 @@ public class GameManager : MonoBehaviour
 
     public static void Nullify()
     {
+        Destroy(Instance);
         Instance = null;
+
     }
 
 }
