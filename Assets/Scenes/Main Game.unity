@@ -1406,7 +1406,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 7caa45be19de231469ebc2fbe408655f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -3519,6 +3519,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9f3fc22048446e4d864435e06cf4279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+--- !u!82 &1986883768 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5867679609421244223, guid: e7f21f34d50e38947a97a8c924b31239, type: 3}
+  m_PrefabInstance: {fileID: 7894589292992083625}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2002321214 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1389562528294433455, guid: d685645259bd12b47819a852f8d18caa, type: 3}
@@ -4318,6 +4323,14 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 837091378}
+    - target: {fileID: 8850430367058526561, guid: e7f21f34d50e38947a97a8c924b31239, type: 3}
+      propertyPath: stepSound
+      value: 
+      objectReference: {fileID: 11400000, guid: 7fbc76ed603ccb84da07e4bbea704b94, type: 2}
+    - target: {fileID: 8850430367058526561, guid: e7f21f34d50e38947a97a8c924b31239, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1986883768}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

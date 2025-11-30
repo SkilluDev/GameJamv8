@@ -11,6 +11,10 @@ public class PlayerMovement : MonoBehaviour
     private float _horizontalInput;
     private float _verticalInput;
     private Vector3 _moveDirection;
+    [SerializeField] private RandomSound stepSound;
+    [SerializeField] private AudioSource audioSource;
+    private float timer = 0f;
+    private float timePerStep = 0.25f;
 
     private Rigidbody _rb;
 
@@ -39,17 +43,28 @@ public class PlayerMovement : MonoBehaviour
 
     private void MovePlayer()
     {
-            
         _moveDirection = _horizontalInput * orientation.right + _verticalInput * orientation.forward;
         if (_isSprinting && canSprint)
         {
-            _rb.AddForce(_moveDirection.normalized * (movementSpeed*sprintMultiplier) * 10f, ForceMode.Force);
+            timer += Time.deltaTime;
+            if (timer >= timePerStep)
+            {
+                timer = 0f;
+                stepSound.Play(audioSource);
+            }
 
+            _rb.AddForce(_moveDirection.normalized * (movementSpeed * sprintMultiplier) * 10f, ForceMode.Force);
         }
         else
         {
-            _rb.AddForce(_moveDirection.normalized * movementSpeed * 10f, ForceMode.Force);
+            timer += Time.deltaTime / 2;
+            if (timer >= timePerStep)
+            {
+                timer = 0f;
+                stepSound.Play(audioSource);
+            }
 
+            _rb.AddForce(_moveDirection.normalized * movementSpeed * 10f, ForceMode.Force);
         }
     }
 }
