@@ -48,7 +48,7 @@ public class DoorSpawner : MonoBehaviour
 
     bool RandomPoint(Vector3 center, float range, out Vector3 result)
     {
-        for (int i = 0; i < 10000; i++)
+        for (int i = 0; i < 100; i++)
         {
             Vector3 randomPoint = center + Random.insideUnitSphere * range;
             NavMeshHit hit;
@@ -64,7 +64,7 @@ public class DoorSpawner : MonoBehaviour
     
     bool RandomPointFurtherThan(Vector3 center, float range, float minRange, out Vector3 result)
     {
-        for (int i = 0; i < 10000; i++)
+        for (int i = 0; i < 100; i++)
         {
             Vector3 randomPoint = center + Random.insideUnitSphere * range;
             NavMeshHit hit;

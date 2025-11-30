@@ -18,7 +18,7 @@ public class PlayerCam : MonoBehaviour
     {
         float mouseX = Input.GetAxis("Mouse X") * Time.deltaTime * sensX;
         _rotationX += Mathf.Clamp(mouseX, -90f, 90f);
-        
+
         transform.rotation = Quaternion.Euler(0, _rotationX, 0);
         orientation.rotation = Quaternion.Euler(0, _rotationX, 0);
     }

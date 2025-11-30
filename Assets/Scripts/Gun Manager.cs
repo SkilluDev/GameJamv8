@@ -37,6 +37,7 @@ public class GunManager : MonoBehaviour
         gunSprite.sprite = gunShoot;
         ShootGun();
         gunShotSound.Play(audioSource);
+        
         yield return new WaitForSeconds(shootTime);
         gunSprite.sprite = gunNormal;
         shooting = false;
