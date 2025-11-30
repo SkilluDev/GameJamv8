@@ -1331,7 +1331,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8248548673792845680}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -1347,6 +1347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d471494e46dab9949955f0ace846888f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BloodManager
-  canvasGroup: {fileID: 0}
-  bloodSplatter: {fileID: 0}
-  bloodOverlay: {fileID: 0}
+  canvasGroup: {fileID: 3442555622043157046}
+  bloodSplatter: {fileID: 8168263416642536892}
+  bloodOverlay: {fileID: 4777914830402900980}
+  alphaPerFrame: 0.02
