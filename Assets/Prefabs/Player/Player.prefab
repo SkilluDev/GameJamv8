@@ -244,6 +244,7 @@ MonoBehaviour:
   maxHealth: 100
   healthBar: {fileID: 0}
   deathSound: {fileID: 11400000, guid: 3364cf899e8c3c54d87b92f612d81d5e, type: 2}
+  hitSound: {fileID: 11400000, guid: eb105be83b9b99d40b6a28bfb9ceeb20, type: 2}
   audioSource: {fileID: 5867679609421244223}
   onPlayerDamage:
     m_PersistentCalls:

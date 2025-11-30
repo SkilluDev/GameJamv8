@@ -8,6 +8,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
 
     [SerializeField] private HealthBar healthBar;
     [SerializeField] private RandomSound deathSound;
+    [SerializeField] private RandomSound hitSound;
     [SerializeField] private AudioSource audioSource;
 
     public UnityEvent onPlayerDamage;
@@ -34,6 +35,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         hasTakenDamage = true;
 
         onPlayerDamage.Invoke();
+        hitSound.Play(audioSource);
 
         if (_currentHealth <= 0f)
         {
