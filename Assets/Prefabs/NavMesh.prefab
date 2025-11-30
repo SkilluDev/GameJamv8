@@ -79,9 +79,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpawnEntities
   spawnRange: 100
   minEnemySpawnRange: 20
-  enemyCount: 15
+  enemyCount: 10
+  enemy2Count: 10
   mushroomCount: 10
   toxicMushroomCount: 10
   enemyPrefab: {fileID: 1521201900798694369, guid: ac06733c47d5d004c8f206d8944d25d7, type: 3}
+  enemy2Prefab: {fileID: 1521201900798694369, guid: 67a6d13a35b07fc499eb25f9e9cff65c, type: 3}
   mushroomPrefab: {fileID: 3997566305268803917, guid: 370676c60773a6f4c9c94fa8e49466ad, type: 3}
   toxicMushroomPrefab: {fileID: 3997566305268803917, guid: ee8bcf21d68bce64bab457c66d9c8844, type: 3}
