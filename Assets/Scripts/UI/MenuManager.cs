@@ -16,6 +16,9 @@ namespace UI
     [SerializeField] private GameObject _background;
     [SerializeField] private GameObject _mainView; 
     [SerializeField] private GameObject _instructionsView;
+    [SerializeField] private GameObject _creditsView;
+
+
 
     private void Awake()
     {
@@ -49,11 +52,13 @@ namespace UI
       {
         _mainView.SetActive(true);
         _instructionsView.SetActive(false);
+        _creditsView.SetActive(false);
       }
       else
       {
         _mainView.SetActive(false);
         _instructionsView.SetActive(false);
+        _creditsView.SetActive(false);
       }
     }
 
@@ -66,12 +71,21 @@ namespace UI
     {
       _mainView.SetActive(false);
       _instructionsView.SetActive(true);
+      _creditsView.SetActive(false);
+    }
+
+    public void CreditsClicked()
+    {
+      _mainView.SetActive(false);
+      _instructionsView.SetActive(false);
+      _creditsView.SetActive(true);
     }
 
     public void BackClicked()
     {
       _instructionsView.SetActive(false);
       _mainView.SetActive(true);
+      _creditsView.SetActive(false);
     }
 
     public void ExitClicked()
