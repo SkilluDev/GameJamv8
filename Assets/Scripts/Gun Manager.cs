@@ -1,5 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,6 +19,8 @@ public class GunManager : MonoBehaviour
     [SerializeField] private RandomSound gunShotSound;
     [SerializeField] private AudioSource audioSource;
 
+    [SerializeField] private CinemachineImpulseSource cinemachineImpulseSource;
+
     private Coroutine currentShoot;
 
     private bool shooting;
@@ -37,12 +39,20 @@ public class GunManager : MonoBehaviour
         gunSprite.sprite = gunShoot;
         ShootGun();
         gunShotSound.Play(audioSource);
-        
+        ShakeCamera();
         yield return new WaitForSeconds(shootTime);
         gunSprite.sprite = gunNormal;
         shooting = false;
     }
-    
+
+    private void ShakeCamera()
+    {
+        bool right = Random.Range(0, 2) == 1 ? true : false;
+        bool top = Random.Range(0, 2) == 1 ? true : false;
+        Vector3 bounce = new Vector3(Random.Range(0.2f, 0.3f) * (right?1:-1),Random.Range(0.2f, 0.3f) * (top?1:-1), 0);
+        cinemachineImpulseSource.GenerateImpulse(bounce);
+    }
+
     public void ShootGun()
     {
         RaycastHit hit;
