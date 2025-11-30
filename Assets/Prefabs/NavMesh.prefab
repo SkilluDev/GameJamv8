@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1302666294501878788}
   - component: {fileID: 6446180467841642757}
-  - component: {fileID: 6729943901248474998}
+  - component: {fileID: 8702143176914327860}
   m_Layer: 0
   m_Name: NavMesh
   m_TagString: Untagged
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: 33af5dc60bb3c2940a55112da2739bf3, type: 2}
   m_BuildHeightMesh: 0
---- !u!114 &6729943901248474998
+--- !u!114 &8702143176914327860
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -74,8 +74,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1167343689394349204}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c09bcd9cefe6174dba650294be39c4b, type: 3}
+  m_Script: {fileID: 11500000, guid: e3f5739fa8db7884088cb641cb298528, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpawnEnemies
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnEntities
   spawnRange: 50
+  enemyCount: 30
+  mushroomCount: 10
+  toxicMushroomCount: 10
   enemyPrefab: {fileID: 1521201900798694369, guid: ac06733c47d5d004c8f206d8944d25d7, type: 3}
+  mushroomPrefab: {fileID: 3997566305268803917, guid: 370676c60773a6f4c9c94fa8e49466ad, type: 3}
+  toxicMushroomPrefab: {fileID: 3997566305268803917, guid: ee8bcf21d68bce64bab457c66d9c8844, type: 3}

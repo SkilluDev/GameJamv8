@@ -10,11 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 485830d6a74d5fc4fa4469cce119bd9d, type: 3}
-  m_Name: RandomSteppingSFX
+  m_Name: RandomEatingSoundSFX
   m_EditorClassIdentifier: Assembly-CSharp::RandomSound
   soundList:
-  - {fileID: 8300000, guid: b84aa2d45cdafdf4ca109a49ad6005db, type: 3}
-  - {fileID: 8300000, guid: d6af79970a3b20448bbe0807991e4db6, type: 3}
-  - {fileID: 8300000, guid: 1033555c11f0db442bbf37b114020b35, type: 3}
-  - {fileID: 8300000, guid: 6369f0ec8829f4a41832b07ffd5ef945, type: 3}
-  volume: 5
+  - {fileID: 8300000, guid: db16f4361006c0443a3998da66b6e382, type: 3}
+  volume: 1
