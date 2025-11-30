@@ -19,6 +19,7 @@ public class DoorSpawner : MonoBehaviour
             CheckClosestWall(point, doorCheckRadius, out closestWall);
             Debug.DrawLine(closestWall.transform.position, closestWall.transform.position + Vector3.up * 10, Color.red, 20f);
             closestWall.GetComponent<WallManager>().EnableDoor();
+
             //Instantiate(doorPrefab, closestWall.transform.position+Vector3.left*-0.1f, closestWall.transform.rotation, closestWall.transform);
         }
     }
@@ -33,7 +34,7 @@ public class DoorSpawner : MonoBehaviour
         Collider[] hitColliders = Physics.OverlapSphere(center, radius, layerMask);
         float maxDistance = 0f;
         Collider maxCollider = hitColliders[0];
-        if(hitColliders.Count() == 0) Debug.LogError("Zero door spaces");
+        Debug.LogError(hitColliders.Count()+ " door spaces");
         foreach (var hitCollider in hitColliders)
         {
             var distance = Vector3.Distance(hitCollider.gameObject.transform.position, center);
@@ -48,7 +49,7 @@ public class DoorSpawner : MonoBehaviour
 
     bool RandomPoint(Vector3 center, float range, out Vector3 result)
     {
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < 1000; i++)
         {
             Vector3 randomPoint = center + Random.insideUnitSphere * range;
             NavMeshHit hit;
@@ -64,7 +65,7 @@ public class DoorSpawner : MonoBehaviour
     
     bool RandomPointFurtherThan(Vector3 center, float range, float minRange, out Vector3 result)
     {
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < 1000; i++)
         {
             Vector3 randomPoint = center + Random.insideUnitSphere * range;
             NavMeshHit hit;

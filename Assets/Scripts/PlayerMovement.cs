@@ -81,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
     {
         stepSound.Play(audioSource);
         float currentSine = Mathf.Sin(sineTimer);
-        Debug.Log("sine=" + currentSine);
+        //Debug.Log("sine=" + currentSine);
         Vector3 bounce;
         bounce = new Vector3(currentSine/3, -0.1f, 0);
         cinemachineImpulseSource.GenerateImpulse(bounce);
