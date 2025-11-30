@@ -50,7 +50,7 @@ GameObject:
   - component: {fileID: 331903572665957022}
   - component: {fileID: 796807525988100898}
   m_Layer: 5
-  m_Name: UI_Finish
+  m_Name: UI_Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
