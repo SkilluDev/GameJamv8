@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour
     {
         Debug.DrawRay(explosionTransform.position, Vector3.up*10f, Color.red, 10f);
         var explosion = Instantiate(explosionPrefab, hitPoint, explosionTransform.rotation);
-
+        
         Destroy(explosion, 1f);
     }
 

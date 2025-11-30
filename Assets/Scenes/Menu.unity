@@ -2787,7 +2787,7 @@ MonoBehaviour:
   _background: {fileID: 8727262615880304954}
   _mainView: {fileID: 1640947696}
   _instructionsView: {fileID: 1456884868}
-  _creditsView: {fileID: 0}
+  _creditsView: {fileID: 946161864}
 --- !u!1 &2037594208
 GameObject:
   m_ObjectHideFlags: 0

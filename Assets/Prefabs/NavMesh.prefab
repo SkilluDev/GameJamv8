@@ -63,7 +63,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 33af5dc60bb3c2940a55112da2739bf3, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 41ff9a21a9228024cb39cc992c8ca6e4, type: 2}
   m_BuildHeightMesh: 0
 --- !u!114 &8702143176914327860
 MonoBehaviour:
@@ -77,8 +77,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3f5739fa8db7884088cb641cb298528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnEntities
-  spawnRange: 50
-  enemyCount: 30
+  spawnRange: 100
+  minEnemySpawnRange: 20
+  enemyCount: 15
   mushroomCount: 10
   toxicMushroomCount: 10
   enemyPrefab: {fileID: 1521201900798694369, guid: ac06733c47d5d004c8f206d8944d25d7, type: 3}
